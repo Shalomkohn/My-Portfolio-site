@@ -1,5 +1,6 @@
 import NavBar from "./components/nav-bar"
 import SideNav from "./components/side-nav"
+import myPicture from "./my-image-large.jpeg"
 import ContactLogos from "./components/contact-logos"
 import { useState } from "react"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
@@ -22,7 +23,7 @@ const App = () => {
                     <Route path="/" element={
                         <>
                             <div className="mainContentDiv">
-                                <div className="my-pic"></div>
+                                <div className="my-pic" style={{backgroundImage: `url(${myPicture})`}}></div>
                                 <div className="myDescriptionSurround">
                                     <div className="my-description">Hello, i'm Shalom.<br /><br />web designer,<br className="breakSometimesHide"/> web developer,<br />JavaScript,<br className="breakSometimesHide"/> react.js.
                                     </div>
