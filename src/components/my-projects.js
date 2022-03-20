@@ -1,12 +1,11 @@
 import wordBeaterImg from '../word-beater-img.png'
-import myPicture from "../my-image-large.jpeg"
 
 const projectsArray = [
     {
     id: 1,
     title: 'WordBeater Game ',
     date: 'Feb/2022',
-    img: myPicture,
+    img: wordBeaterImg,
     aTagHref: 'https://main.dpv635jgbcxbv.amplifyapp.com/',
     srcCodeHref: 'https://gist.github.com/Shalomkohn/8fc80a8019b0ada6465f1b6d05ffc6c4',
     }

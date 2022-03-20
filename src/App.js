@@ -1,6 +1,6 @@
 import NavBar from "./components/nav-bar"
 import SideNav from "./components/side-nav"
-import myPicture from "./my-image-large.jpeg"
+import myPicture from "./my-picture.png"
 import ContactLogos from "./components/contact-logos"
 import { useState } from "react"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
