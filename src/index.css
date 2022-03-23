@@ -16,7 +16,6 @@
   list-style: none;
   font-size: 1.5rem;
 }
-
 .navUl li {
   margin-right: 2rem;
 }
@@ -36,7 +35,6 @@
 }
 
 .sideNav {
-  float: right;
   width: 100%;
   text-align: center;
   border-bottom: 1px solid black;
@@ -192,8 +190,8 @@ a {
   .menuAndCloseIcon {
     display: none;
   }
-  .sideNav {
-    display: none;
+  .sideNavShow {
+    height: 0;
   }
 
   .liToggle {
