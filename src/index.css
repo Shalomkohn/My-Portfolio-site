@@ -36,10 +36,13 @@
 }
 
 .sideNav {
-  position: fixed;
+  float: right;
   width: 100%;
   text-align: center;
   border-bottom: 1px solid black;
+  height: 0;
+  overflow: hidden;
+  transition: .2s;
 }
 
 .sideNavUl {
@@ -50,6 +53,9 @@
   margin: 25px 0;
 }
 
+.sideNavShow {
+  height: 154px;
+}
 .my-pic {
   border: 2px solid black;
   width: 35%;

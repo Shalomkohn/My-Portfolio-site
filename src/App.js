@@ -18,7 +18,7 @@ const App = () => {
         <Router>
             <>
                 <NavBar menuIcon={!showSideNav} switchSideNavVisible={switchSideNavVisible} showSideNav={showSideNav}/>
-                {showSideNav && <SideNav switchSideNavVisible={switchSideNavVisible} />}
+                <SideNav switchSideNavVisible={switchSideNavVisible} isVisible={showSideNav}/>
                 <Routes>
                     <Route path="/" element={
                         <>
