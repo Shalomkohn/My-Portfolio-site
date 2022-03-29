@@ -11,13 +11,21 @@ import MyProjects from "./components/my-projects"
 const App = () => {
 
     const [showSideNav, setShowSidNav] = useState(false)
-
+    
     const switchSideNavVisible = () => setShowSidNav(!showSideNav)
 
+    let footerHeight;
+    if(window.innerWidth < 900){
+        footerHeight = window.innerHeight - 745;
+    }else {
+        footerHeight = 0;
+    }
+
+    
     return(
         <Router>
             <>
-                <NavBar menuIcon={!showSideNav} switchSideNavVisible={switchSideNavVisible} showSideNav={showSideNav}/>
+                <NavBar isMenuIcon={!showSideNav} switchSideNavVisible={switchSideNavVisible} showSideNav={showSideNav}/>
                 <SideNav switchSideNavVisible={switchSideNavVisible} isVisible={showSideNav}/>
                 <Routes>
                     <Route path="/" element={
@@ -37,7 +45,9 @@ const App = () => {
                     <Route path="/my-projects" element={<MyProjects />} />
                 </Routes>
             </>
-            <p className="copyWrite">Copyright &copy; 2022 Shalom Kohn</p>
+            <footer className="footer" style={{height: footerHeight }}>
+                <p className="copyWrite">Copyright &copy; 2022 Shalom Kohn</p>
+            </footer>
         </Router>
     )
 }
