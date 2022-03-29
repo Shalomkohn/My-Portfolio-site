@@ -10,10 +10,29 @@ import MyProjects from "./components/my-projects"
 
 const App = () => {
 
-    const [showSideNav, setShowSidNav] = useState(false)
-    
-    const switchSideNavVisible = () => setShowSidNav(!showSideNav)
+    const [showSideNav, setShowSideNav] = useState(false)
+    const [closeHeight, setCloseHeight] = useState(0)
+    const [menuHeight, setMenuHeight] = useState(37)
 
+    const toggleSlideNav = () => {
+        if(showSideNav){
+            setCloseHeight(37)
+            setMenuHeight(0)
+        }else if(!showSideNav){
+            setCloseHeight(0)
+            setMenuHeight(37)
+        }
+        setTimeout(()=>{
+            setShowSideNav(false)
+        },70)
+    }
+    const onMenuClick = () => {
+        toggleSlideNav()
+        setTimeout(()=>{
+            setShowSideNav(true)
+        },72)
+    }
+    
     let footerHeight;
     if(window.innerWidth < 900){
         footerHeight = window.innerHeight - 745;
@@ -25,8 +44,8 @@ const App = () => {
     return(
         <Router>
             <>
-                <NavBar isMenuIcon={!showSideNav} switchSideNavVisible={switchSideNavVisible} showSideNav={showSideNav}/>
-                <SideNav switchSideNavVisible={switchSideNavVisible} isVisible={showSideNav}/>
+                <NavBar onClick={toggleSlideNav} onMenuClick={onMenuClick} showSideNav={showSideNav} menuHeight={menuHeight} closeHeight={closeHeight}/>
+                <SideNav onClick={toggleSlideNav} isVisible={showSideNav}/>
                 <Routes>
                     <Route path="/" element={
                         <>
