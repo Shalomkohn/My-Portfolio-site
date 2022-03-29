@@ -24,13 +24,13 @@ const App = () => {
         }
         setTimeout(()=>{
             setShowSideNav(false)
-        },70)
+        },.70)
     }
     const onMenuClick = () => {
         toggleSlideNav()
         setTimeout(()=>{
             setShowSideNav(true)
-        },72)
+        },.72)
     }
     
     let footerHeight;
