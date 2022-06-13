@@ -84,7 +84,6 @@
 .sideNav {
   width: 100%;
   text-align: center;
-  border-bottom: 1px solid black;
   height: 0;
   overflow: hidden;
   transition: .2s;
@@ -101,9 +100,9 @@
 .sideNavShow {
   height: 154px;
 }
-.my-pic {
-  width: 35%;
-  height: 35vw;
+.black-box {
+  width: 39%;
+  height: 39vw;
   background-size: 120%;
   background-color: black;
   background-position: -3vw -6vw;
@@ -254,7 +253,7 @@ a {
 }
 
 @media screen and (min-width: 768px) {
-  .my-pic {
+  .black-box {
     width: 25vw;
     height: 25vw;
   }
@@ -287,6 +286,10 @@ a {
     height: 0;
   }
 
+  .sideNav {
+    border-bottom: 1px solid black;
+  }
+
   .liToggle {
     display: initial;
   }
@@ -306,7 +309,7 @@ a {
     align-items: center;
   }
 
-  .my-pic {
+  .black-box {
     margin: 0;
     width: 20vw;
     height: 20vw;

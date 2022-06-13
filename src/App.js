@@ -1,6 +1,5 @@
 import NavBar from "./components/nav-bar"
 import SideNav from "./components/side-nav"
-import myPicture from "./my-picture.png"
 import ContactLogos from "./components/contact-logos"
 import { useState } from "react"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
@@ -50,7 +49,7 @@ const App = () => {
                         <Route path="/" element={
                             <>
                                 <div className="mainContentDiv">
-                                    <div className="my-pic">
+                                    <div className="black-box">
                                         <h1>Hello,<br /> I'm Shalom.</h1>
                                     </div>
                                     <div className="my-description">
