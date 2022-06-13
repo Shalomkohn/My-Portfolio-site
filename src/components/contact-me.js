@@ -26,7 +26,6 @@ const ContactMe = () => {
     ]
     return(
         <div className="contactInfoDiv">
-
             {info.map( contact => {
                 return(
                     <ul key={contact.id} className="contactInfoUl">

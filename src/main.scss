@@ -1,3 +1,14 @@
+@mixin bigMobile {
+  @media(min-height: 820px){
+    @content
+  }
+};
+@mixin desktop {
+  @media(min-width: 900px){
+    @content
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,27 +17,36 @@
  
 }
 
-body {
-  background: linear-gradient(140deg,rgb(250, 248, 245) 49.4%, rgb(235, 235, 230) 50%);
+.hideOnMobile {
+  display: none;
 }
 
+.showOnMobile {
+  display: block;
+}
 
-.navUl{
+.backgroundColor {
+  min-height: 100vh;
+  background: linear-gradient(140deg,rgb(250, 248, 245) 49.4%, rgb(235, 235, 230) 50%) fixed;
+}
+
+.navBar {
   display: flex;
-  flex-direction: row-reverse;
-  padding: 20px 0;
-  list-style: none;
-  font-size: 1.5rem;
-  position: relative;
+  list-style-type: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
 }
+  
+.navUl li {
+    padding-left: 30px;
+    font-size: 1.5rem;
+}
+
 
 .btn:hover {
   transition: .3s;
   color: #555;
-}
-
-.navUl li {
-  margin-right: 2rem;
 }
 
 .liToggle {
@@ -35,28 +55,31 @@ body {
 
 .websiteLogo {
   font-size: 2rem;
-  position: absolute;
-  left: 20px;
+  padding-left: 10px;
+
+  &:hover {
+    position: relative;
+    left: 1px;
+  }
 }
 
-.websiteLogo:hover {
-  left: 21px;
-}
 
 .menuAndCloseIcon {
   cursor: pointer;
+
+  li {
+    transition: .1s;
+  }
+
+  svg:hover {
+    fill: #555;
+    transition: .3s;
+    position: relative;
+    right: 1px;
+  }
 }
 
-.menuAndCloseIcon li {
-  transition: .4s;
-}
 
-.menuAndCloseIcon svg:hover {
-  fill: #555;
-  transition: .3s;
-  position: relative;
-  right: 1px;
-}
 
 .sideNav {
   width: 100%;
@@ -79,12 +102,21 @@ body {
   height: 154px;
 }
 .my-pic {
-  border: 2px solid black;
   width: 35%;
   height: 35vw;
   background-size: 120%;
+  background-color: black;
   background-position: -3vw -6vw;
   margin: 40px auto 50px auto;
+  position: relative;
+
+  h1 {
+    color: rgb(250, 248, 245);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .my-description {
@@ -92,6 +124,10 @@ body {
   margin: 0 auto;
   font-size: 2rem;
   text-align: center;
+}
+
+.description-line-2 {
+  color: #444;
 }
 
 .contactLogos {
@@ -118,6 +154,32 @@ body {
   right: 1px;
 }
 
+.footer {
+  padding-bottom: calc(100vh - 749px);
+  position: relative;
+  height: 30px;
+  @include desktop(){
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+  }
+  
+  .copyWrite{
+    position: absolute;
+    width: 100%;
+    @include bigMobile(){
+    top: 45%;
+    }
+    @include desktop(){
+      width: unset;
+      top: unset;
+      bottom: 14px;
+      right: 18px;
+    }
+  }
+}
+
 /*  =============   /about-me ============= */
 
 .aboutMeDiv {
@@ -125,7 +187,6 @@ body {
   padding: 40px 0;
   margin: 0 auto;
   text-align: justify;
-  min-height: 685.5px;
 }
 
 .thisWebsiteSrcHrefATag {
@@ -140,7 +201,6 @@ a {
 }
 .contactInfoDiv {
   padding: 6rem 3rem 0;
-  min-height: 685.5px;
 }
 .contactInfoUl {
   list-style: none;
@@ -217,8 +277,6 @@ a {
     height: 100vh;
   }
   .websiteLogo {
-    bottom: 50%;
-    transform: translatey(50%);
     font-size: 3.3vw;
   }
 
@@ -233,44 +291,41 @@ a {
     display: initial;
   }
 
+  .navUl {
+    padding-right: 20px;
+  }
+
   .mainContentDiv {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     width: 63%;
-    margin: auto;
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    justify-content: space-between;
+    align-items: center;
   }
 
   .my-pic {
     margin: 0;
-    width: initial;
+    width: 20vw;
     height: 20vw;
-    background-size: 100%;
-    background-position: 0 -2vw;
-  }
-
-  .myDescriptionSurround {
-    grid-column-start: 2;
-    grid-column-end: 4;
-    position: relative;
-    margin-left: 5%;
   }
 
   .my-description {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     text-align: left;
     font-size: 3vw;
+    display: inline;
+    line-height: 1.7;
   }
 
-  .breakSometimesHide {
-    display: none ;
+  .hideOnMobile {
+    display: block ;
   } 
+
+  .showOnMobile {
+    display: none;
+  }
 
   .contactLogos {
     width: 20%;
@@ -280,18 +335,6 @@ a {
     position: absolute;
     left: 20px;
     bottom: 0;
-  }
-  
-  .footer {
-    height: unset;
-  }
-
-  .copyWrite {
-    top: unset;
-    position: absolute;
-    right: 20px;
-    bottom: 14px;
-    font-family: 0;
   }
   /*  ======== /my-projects ======== */
 
