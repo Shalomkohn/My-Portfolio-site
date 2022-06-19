@@ -21,8 +21,8 @@ const MyProjects = () => {
                         <h3 className='projectName'>{project.title}</h3>
                         <p className='projectDate'>{project.date}</p>
                         <img className='projectImg' src={project.img} alt="project image" />
-                        <a href={project.aTagHref} className='projectLink btn'>Look Up The Site</a>
-                        <a className='projectSourceCodeATag' href={project.srcCodeHref}>See The Source Code</a>
+                        <a href={project.aTagHref} target="_blank" className='projectLink btn'>Look Up The Site</a>
+                        <a className='projectSourceCodeATag' href={project.srcCodeHref} target="_blank">See The Source Code</a>
                     </div>        
                 )
             })}
