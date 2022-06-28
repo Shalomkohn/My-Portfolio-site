@@ -1,8 +1,17 @@
 import wordBeaterImg from '../word-beater-img.png'
+import NCFurnitureImg from '../NC-furniture-img.png'
 
 const projectsArray = [
     {
         id: 1,
+        title: 'NC Furniture',
+        date: 'Jun/2022',
+        img: NCFurnitureImg,
+        aTagHref: 'https://main.dy2o65319qp3n.amplifyapp.com',
+        srcCodeHref: 'https://github.com/Shalomkohn/North-capital-furniture',
+    },
+    {
+        id: 2,
         title: 'WordBeater Game ',
         date: 'Feb/2022',
         img: wordBeaterImg,
@@ -18,11 +27,15 @@ const MyProjects = () => {
             {projectsArray.map(project => {
                 return(
                     <div key={project.id} className='project'>
-                        <h3 className='projectName'>{project.title}</h3>
-                        <p className='projectDate'>{project.date}</p>
+                        <div>
+                            <h3 className='projectName'>{project.title}</h3>
+                            <p className='projectDate'>{project.date}</p>
+                        </div>
                         <img className='projectImg' src={project.img} alt="project image" />
-                        <a href={project.aTagHref} target="_blank" className='projectLink btn'>Look Up The Site</a>
-                        <a className='projectSourceCodeATag' href={project.srcCodeHref} target="_blank">See The Source Code</a>
+                        <div>
+                            <a href={project.aTagHref} target="_blank" className='projectLink btn'>Look Up Site</a>
+                            <a className='projectSourceCodeATag' href={project.srcCodeHref} target="_blank">Source Code</a>
+                        </div>
                     </div>        
                 )
             })}
