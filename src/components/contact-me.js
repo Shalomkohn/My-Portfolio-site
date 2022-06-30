@@ -25,16 +25,21 @@ const ContactMe = () => {
         }
     ]
     return(
-        <div className="contactInfoDiv">
-            {info.map( contact => {
-                return(
-                    <ul key={contact.id} className="contactInfoUl">
-                        <li className="infoLi infoLiImg">{contact.icon}</li>
-                        <li className="infoLi infoLiText btn">{contact.text}</li>
-                    </ul>
-                )
-            })}
-        </div>
+        <>
+            <div className="contactInfoDiv">
+                {info.map( contact => {
+                    return(
+                        <ul key={contact.id} className="contactInfoUl">
+                            <li className="infoLi infoLiImg">{contact.icon}</li>
+                            <li className="infoLi infoLiText btn">{contact.text}</li>
+                        </ul>
+                    )
+                })}
+            </div>
+            <footer className="footer">
+                <p className="copyWrite">Copyright &copy; 2022 Shalom Kohn</p>
+            </footer> 
+        </>
     )
 }
 

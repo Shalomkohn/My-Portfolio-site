@@ -62,15 +62,15 @@ const App = () => {
                                     </div>
                                 </div>
                                 <ContactLogos />
+                                <footer className="footer">
+                                    <p className="copyWrite">Copyright &copy; 2022 Shalom Kohn</p>
+                                </footer>   
                             </>}
                         />
                         <Route path="/about-me" element={<AboutMe />} />
                         <Route path="/contact-me" element={<ContactMe />} />
                         <Route path="/my-projects" element={<MyProjects />} />
                     </Routes>
-                    <footer className="footer">
-                        <p className="copyWrite">Copyright &copy; 2022 Shalom Kohn</p>
-                    </footer>
                 </div>
             </>
         </Router>

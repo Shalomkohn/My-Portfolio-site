@@ -155,17 +155,27 @@
 
 .footer {
   padding-bottom: calc(100vh - 749px);
-  position: relative;
+
+  width: 100vw;
+  bottom: 0;
   height: 30px;
+  @include desktop(){
+    position: absolute;
+  }
   
   .copyWrite{
-    position: absolute;
-    width: 100%;
+
+    // bottom: ;
+    // width: 100%;
     @include desktop(){
-      width: unset;
-      top: unset;
-      bottom: 14px;
-      right: 18px;
+      position: absolute;
+      width: 100%;
+      text-align: end;
+      right: 15px;
+    //   width: unset;
+    //   top: unset;
+    //   bottom: 14px;
+    //   right: 18px;
     }
   }
 }
@@ -269,9 +279,6 @@ a {
 @media screen and (min-width: 900px){
   body {
     height: 100vh;
-  }
-  .websiteLogo {
-    font-size: 3.3vw;
   }
 
   .menuAndCloseIcon {
