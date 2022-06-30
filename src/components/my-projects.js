@@ -1,9 +1,18 @@
 import wordBeaterImg from '../word-beater-img.png'
 import NCFurnitureImg from '../NC-furniture-img.png'
+import samsCaulkingImg from '../sams-caulking-img.png'
 
 const projectsArray = [
     {
         id: 1,
+        title: 'Sams Shower Caulking',
+        date: 'jul/2022',
+        img: samsCaulkingImg,
+        aTagHref: 'https://dev8171.dtiqg5g6eferp.amplifyapp.com',
+        srcCodeHref: 'https://github.com/Shalomkohn/sams-caulking',
+    },
+    {
+        id: 2,
         title: 'NC Furniture',
         date: 'Jun/2022',
         img: NCFurnitureImg,
@@ -11,7 +20,7 @@ const projectsArray = [
         srcCodeHref: 'https://github.com/Shalomkohn/North-capital-furniture',
     },
     {
-        id: 2,
+        id: 3,
         title: 'WordBeater Game ',
         date: 'Feb/2022',
         img: wordBeaterImg,
@@ -39,7 +48,7 @@ const MyProjects = () => {
                     </div>        
                 )
             })}
-            <div className='project'>
+            <div className='project' style={{height: '350px'}}>
                 <h3 className='projectName'>Another cool project being worked on right now...</h3>
             </div>  
         </div>

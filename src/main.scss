@@ -157,19 +157,10 @@
   padding-bottom: calc(100vh - 749px);
   position: relative;
   height: 30px;
-  @include desktop(){
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-  }
   
   .copyWrite{
     position: absolute;
     width: 100%;
-    @include bigMobile(){
-    top: 45%;
-    }
     @include desktop(){
       width: unset;
       top: unset;
@@ -220,10 +211,10 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 13rem;
-  margin: 4rem auto 9rem;
+  width: 15rem;
+  margin: 4rem auto;
   padding: 0 1rem;
-  border-left: 1px solid black;
+  box-shadow: 0 2px 3px rgba($color: #999, $alpha: 0.7);
 }
 
 .projectName {
@@ -232,6 +223,7 @@ a {
 
 .projectImg {
   width: 100%;
+  margin: 20px 0;
 }
 
 .projectLink {
@@ -349,11 +341,7 @@ a {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  .project {
-    width: 20rem;
-    border-left: 0;
-    box-shadow: 0 0 3px rgba($color: #999, $alpha: 0.7);
-  }
+
 
   /*  =============   /about-me ============= */
 
