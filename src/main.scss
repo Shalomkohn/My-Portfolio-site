@@ -165,17 +165,11 @@
   
   .copyWrite{
 
-    // bottom: ;
-    // width: 100%;
     @include desktop(){
       position: absolute;
       width: 100%;
       text-align: end;
       right: 15px;
-    //   width: unset;
-    //   top: unset;
-    //   bottom: 14px;
-    //   right: 18px;
     }
   }
 }
@@ -185,7 +179,7 @@
 .aboutMeDiv {
   width: 70%;
   padding: 40px 0;
-  margin: 0 auto;
+  margin: 0 auto 0;
   text-align: justify;
 }
 
@@ -270,8 +264,7 @@ a {
   /*  =============   /about-me ============= */
 
   .aboutMeDiv {
-    width: 50%;
-    margin: 9vh auto;
+    max-width: 500px;
     font-size: large;
   }
 }
@@ -353,8 +346,6 @@ a {
   /*  =============   /about-me ============= */
 
   .aboutMeDiv {
-    width: 40%;
-    margin: 13vh auto;
     font-size: large;
   }
     /*  ======== /contac-me ======== */
