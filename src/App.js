@@ -2,7 +2,7 @@ import NavBar from "./components/nav-bar"
 import SideNav from "./components/side-nav"
 import ContactLogos from "./components/contact-logos"
 import { useState } from "react"
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom"
 import AboutMe from "./components/about-me"
 import ContactMe from "./components/contact-me"
 import MyProjects from "./components/my-projects"
@@ -43,23 +43,42 @@ const App = () => {
         <Router>
             <>
                 <div className="backgroundColor">
+                    <div className="overlay-right"></div>
+                    <div className="overlay-top"></div>
+                    <div className="overlay-bottom"></div>
                     <NavBar onClick={closeSlideNav} onMenuClick={handleMenuClick} {...theProps}/>
                     <SideNav onClick={closeSlideNav} isVisible={showSideNav}/>
                     <Routes>
                         <Route path="/" element={
                             <>
                                 <div className="mainContentDiv">
-                                    <div className="black-box">
-                                        <h1>Hello,<br /> I'm Shalom.</h1>
+                                    <div className="hero-box-1">
+                                        <h1>
+                                            Hello,<br />
+                                            <span className="short-text">My name's Shalom.</span>
+                                            <span className="long-text">My name's Shalom.</span>
+                                        </h1>
                                     </div>
-                                    <div className="my-description">
-                                        web design,
-                                        <br className="showOnMobile"/>
-                                        <div className="hideOnMobile"> web development.</div>
-                                        <div className="description-line-2">
-                                            with passion and trust.
+                                    <div className="hero-box-2">
+                                        {/* <h2>I'm a nice guy <br /> and a Web Developer</h2> */}
+                                        <h2 className="long-text">I'm a nice guy<br />And i'm a Web Developer</h2>
+                                        <div className="callToAction">
+                                            <button className="aboutMe">
+                                                <Link to="/about-me" className="btn">
+                                                    <span className="short-text">About Me </span>
+                                                    <span className="long-text">More about me </span>
+                                                    <i class="fa-solid fa-user"></i>
+                                                </Link>
+                                            </button>
+                                            <button className="contactMe">
+                                                <Link to="/contact-me" className="btn">
+                                                    <span>Contact Me </span>
+                                                    <i className="fa-solid fa-comment"></i>
+                                                </Link>
+                                            </button>
                                         </div>
                                     </div>
+                                  
                                 </div>
                                 <ContactLogos />
                                 <footer className="footer">

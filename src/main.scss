@@ -1,3 +1,12 @@
+$primaryColor: #4380FF;
+$lightPrimaryColor: #5C8FFF;
+$darkPrimaryColor: #1D4CB3;
+$darkComplementaryColor: #B3800B;
+$lightComplementaryColor: #FFC642;
+$darkColor: #051026;
+$darkGray: #606060;
+$lightColor: #F0F2F7;
+
 @mixin bigMobile {
   @media(min-height: 820px){
     @content
@@ -14,20 +23,49 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Playfair Display', serif;
- 
 }
 
-.hideOnMobile {
-  display: none;
+.overlay-right {
+  position: fixed;
+  top: -50%;
+  right: 5%;
+  height: 250%;
+  width: 40%;
+  background-color: $darkComplementaryColor;
+  opacity: .2;
+  transform: rotate(45deg);
+  z-index: 0;
 }
 
-.showOnMobile {
-  display: block;
+.overlay-top {
+  position: fixed;
+  top: 0%;
+  left: -55%;
+  width: 250%;
+  height: 40%;
+  background-color: $primaryColor;
+  opacity: .2;
+  transform: rotate(45deg);
+  z-index: 0;
+  background-image: url("/code.png");
+  background-size: 70px;
+}
+
+.overlay-bottom {
+  position: fixed;
+  top: 40%;
+  height: 100%;
+  width: 20%;
+  background-color: $primaryColor;
+  opacity: .15;
+  transform: rotate(-45deg);
+  z-index: 0;
 }
 
 .backgroundColor {
   min-height: 100vh;
-  background: linear-gradient(140deg,rgb(250, 248, 245) 49.4%, rgb(235, 235, 230) 50%) fixed;
+  // background: linear-gradient(140deg, $lightColor 49.4%, rgb(235, 235, 230) 50%) fixed;
+  background-color: $lightColor;
 }
 
 .navBar {
@@ -36,17 +74,19 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  position: relative;
+  z-index: 10;
 }
   
 .navUl li {
     padding-left: 30px;
     font-size: 1.5rem;
-}
+    color: $darkGray;
+    transition: .3s;
 
-
-.btn:hover {
-  transition: .3s;
-  color: #555;
+    &:hover {
+      color: $darkComplementaryColor;
+    }
 }
 
 .liToggle {
@@ -56,6 +96,7 @@
 .websiteLogo {
   font-size: 2rem;
   padding-left: 10px;
+  color: $darkGray;
 
   &:hover {
     position: relative;
@@ -71,15 +112,16 @@
     transition: .1s;
   }
 
+  svg {
+    fill: $darkGray;
+  }
+
   svg:hover {
-    fill: #555;
     transition: .3s;
     position: relative;
     right: 1px;
   }
 }
-
-
 
 .sideNav {
   width: 100%;
@@ -87,6 +129,8 @@
   height: 0;
   overflow: hidden;
   transition: .2s;
+  position: relative;
+  z-index: 5;
 }
 
 .sideNavUl {
@@ -94,55 +138,142 @@
 }
 
 .sideNavUl li {
+  color: $darkGray;
   margin: 25px 0;
 }
 
 .sideNavShow {
   height: 154px;
 }
-.black-box {
-  width: 39%;
-  height: 39vw;
-  background-size: 120%;
-  background-color: black;
-  background-position: -3vw -6vw;
-  margin: 80px auto 80px;
+
+.long-text {
+  display: none;
+}
+
+@keyframes bounceBox1 {
+  0% {
+     transform: translateY(-10000%); 
+  }
+  80% { 
+    transform: translateY(0); 
+  } 
+  90% {
+     transform: translateY(-10%); 
+  }
+  100% { 
+    transform: translateY(0); 
+  } 
+}
+@keyframes bounceBox2 {
+  0% {
+     transform: translateY(-10000%); 
+  }
+  80% { 
+    transform: translateY(0); 
+  } 
+  90% {
+     transform: translateY(-10%); 
+  }
+  100% { 
+    transform: translateY(0); 
+  } 
+}
+
+.hero-box-1 {
+  animation: bounceBox1 1.8s; 
+  animation-delay: .3s;
+  width: 200px;
+  background-color: $darkPrimaryColor;
+  margin: 80px auto  30px;
   position: relative;
+  padding: 20px;
 
   h1 {
-    color: rgb(250, 248, 245);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    color: $lightColor;
   }
 }
 
-.my-description {
-  width: 60%;
-  margin: 0 auto;
-  font-size: 2rem;
-  text-align: center;
+.hero-box-2 {
+  animation: bounceBox2 1.8s; 
+  width: 200px;
+  padding: 20px;
+  background-color: $darkComplementaryColor;
+  margin: 0 auto 80px;
+  position: relative;
+
+  h2 {
+    color: $lightColor;
+    font-size: 32px;
+  }
+
+  .callToAction .aboutMe{
+    border: none;
+    margin-top: 20px;
+    color: $darkComplementaryColor;
+    padding: 5px 10px;
+    font-size: 18px;
+    width: 100%;
+
+    i {
+      margin-left: 10px;
+    }
+
+    &:hover {
+      transform: translate(2px, -2px);
+      box-shadow: -2px 2px 8px #33333355;
+  
+      i {
+        color: $darkGray;
+        transition: .3s;
+      }
+    }
+  }
+
+  .callToAction .contactMe{
+    margin-top: 20px;
+    border: 1px solid $lightColor;
+    background-color: transparent;
+    color: $lightColor;
+    padding: 5px 10px;
+    font-size: 18px;
+    width: 100%;
+
+    i {
+      margin-left: 10px;
+    }
+
+    &:hover {
+      transform: translate(2px, -2px);
+      box-shadow: -2px 2px 8px #33333355;
+
+      i {
+        color: $darkGray;
+        transition: .3s;
+      }
+    }
+  }
 }
 
-.description-line-2 {
-  color: #444;
-}
 
 .contactLogos {
   z-index: 5;
   width: 50%;
-  margin: 5rem auto;
+  margin: 80px auto ;
   display: flex;
   justify-content: space-between;
 }
 
 .contactLogo {
-  color: black;
+  color: $darkGray;
   font-size: 2.5rem;
   transition: .3s;
   text-shadow: 0px 1px 3px #888;
+
+  &:hover {
+    color: $lightPrimaryColor;
+  }
 }
+
 .sideNavUl li:hover, .contactLogo:hover, .project a:hover {
   position: relative;
   left: 1px;
@@ -155,21 +286,20 @@
 
 .footer {
   padding-bottom: calc(100vh - 749px);
-
   width: 100vw;
   bottom: 0;
   height: 30px;
   @include desktop(){
-    position: absolute;
+    position: fixed;
   }
   
   .copyWrite{
-
     @include desktop(){
       position: absolute;
       width: 100%;
       text-align: end;
       right: 15px;
+      bottom: 15px;
     }
   }
 }
@@ -182,6 +312,7 @@
   padding: 40px 0;
   margin: 0 auto 0;
   text-align: justify;
+  color: $darkGray;
 }
 
 .thisWebsiteSrcHrefATag {
@@ -194,9 +325,14 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
 .contactInfoDiv {
   padding: 6rem 3rem 0;
+  color: $darkGray;
+  max-width: 500px;
+  margin: auto;
 }
+
 .contactInfoUl {
   list-style: none;
   display: flex;
@@ -204,13 +340,33 @@ a {
   flex-direction: row;
   font-size: 20px;
   margin-bottom: 4rem;
+
+  &:hover {
+      color: $lightPrimaryColor;
+  }
+
+  i {
+    color: $darkGray;
+
+    &:hover {
+      color: $lightPrimaryColor;
+    }
+  }
 }
+
 .infoLiText {
   margin: .5rem ;
 }
 
 
 /*  =============   /my-projects ============= */
+
+.myProjectsDiv {
+  color: $darkGray;
+  .projectName{
+    color: $lightPrimaryColor;
+  }
+} 
 
 .project {
   display: flex;
@@ -219,7 +375,10 @@ a {
   width: 15rem;
   margin: 4rem auto;
   padding: 0 1rem;
-  box-shadow: 0 2px 3px rgba($color: #999, $alpha: 0.7);
+  box-shadow: 0 2px 3px rgba($color: #777, $alpha: 0.7);
+  background-color: rgba($color: $lightColor, $alpha: 0.5) ;
+  position: relative;
+  z-index: 1;
 }
 
 .projectName {
@@ -253,10 +412,6 @@ a {
 }
 
 @media screen and (min-width: 768px) {
-  .black-box {
-    width: 25vw;
-    height: 25vw;
-  }
 
   .contactLogos {
     width: 30%;
@@ -267,9 +422,51 @@ a {
   .aboutMeDiv {
     font-size: large;
   }
+
+  .overlay-bottom {
+    background-image: url("/website.png");
+    background-size: 70px;
+  }
 }
 
 @media screen and (min-width: 900px){
+  @keyframes bounceBox1 {
+    0% {
+       transform: translateY(-10000%); 
+    }
+    80% { 
+      transform: translateY(0); 
+    } 
+    90% {
+       transform: translateY(-10%); 
+    }
+    100% { 
+      transform: translateY(0); 
+    } 
+ }
+  @keyframes bounceBox2 {
+    0% {
+       transform: translateY(-10000%); 
+    }
+    80% { 
+      transform: translateY(0); 
+    } 
+    90% {
+       transform: translateY(-10%); 
+    }
+    100% { 
+      transform: translateY(0); 
+    } 
+ }
+
+  &.long-text {
+    display: inline;
+  }
+
+  &.short-text {
+    display: none;
+  }
+
   body {
     height: 100vh;
   }
@@ -282,7 +479,7 @@ a {
   }
 
   .sideNav {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid $darkColor;
   }
 
   .liToggle {
@@ -295,34 +492,43 @@ a {
 
   .mainContentDiv {
     display: flex;
-    width: 63%;
     position: absolute;
-    top: 40%;
-    left: 55%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
   }
 
-  .black-box {
+  .hero-box-1 {
+    animation: bounceBox1 1.3s ; 
+    width: 250px;
     margin: 0;
-    width: 20vw;
-    height: 20vw;
+    padding: 40px;
   }
 
-  .my-description {
-    text-align: left;
-    font-size: 3vw;
-    display: inline;
-    line-height: 1.7;
-  }
+  .hero-box-2 {
+    animation: bounceBox2 1.3s; 
+    animation-delay: .3s;
+    padding: 40px;
+    margin: 0 0 0 40px;
+    width: 500px;
 
-  .hideOnMobile {
-    display: block ;
-  } 
+    h2 {
+          font-size: 25px;
+          line-height: 1.7em;
+    }
 
-  .showOnMobile {
-    display: none;
+    .callToAction{
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      margin-top: 0px;
+
+      //.aboutMe,
+      .contactMe {
+        margin-left: 40px;
+      }
+    }
   }
 
   .contactLogos {
@@ -357,6 +563,7 @@ a {
     transform: translate(-50%);
     left: 50%;
     margin: 0;
+    padding: 0;
   }
 
 }
