@@ -9,12 +9,13 @@
   }
 }
 
+$black: #1d1d1d;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Playfair Display', serif;
- 
 }
 
 .hideOnMobile {
@@ -36,6 +37,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  color: $black;
 }
   
 .navUl li {
@@ -100,14 +102,87 @@
 .sideNavShow {
   height: 154px;
 }
+
+@keyframes backgroundColorSparkle {
+  0% {
+    background-color: #1d1d1d;
+  }
+  20% {
+    background-color: #1d1d1d;
+  }
+  35% {
+    background-color: #695e5e;
+  }
+  50% {
+    background-color: #1d1d1d;
+  }
+  70% {
+    background-color: #1d1d1d;
+  }
+  85% {
+    background-color: #54695a;
+  }
+  100% {
+    background-color: #1d1d1d;
+  }
+}
+
+@keyframes colorSparkle1 {
+  0% {
+    color: #1d1d1d;
+  }
+  70% {
+    color: #1d1d1d;
+  }
+  85% {
+    color: #a1b695;
+  }
+  100% {
+    color: #1d1d1d;
+  }
+}
+@keyframes colorSparkle2 {
+  0% {
+    color: #1d1d1d;
+  }
+  70% {
+    color: #1d1d1d;
+  }
+  85% {
+    color: #b59b93;
+  }
+  100% {
+    color: #1d1d1d;
+  }
+}
+
+@keyframes colorSparkle3 {
+  0% {
+    color: #1d1d1d;
+  }
+  70% {
+    color: #1d1d1d;
+  }
+  85% {
+    color: #94b29c;
+  }
+  100% {
+    color: #1d1d1d;
+  }
+}
+
 .black-box {
-  width: 39%;
-  height: 39vw;
+  animation: backgroundColorSparkle 7s infinite;
+  animation-delay: 1.7s;
+  width: 200px;
+  height: 200px;
   background-size: 120%;
-  background-color: black;
+  background-color: $black;
   background-position: -3vw -6vw;
   margin: 80px auto 80px;
   position: relative;
+  animation-timing-function: ease-in-out;
+  
 
   h1 {
     color: rgb(250, 248, 245);
@@ -123,11 +198,58 @@
   margin: 0 auto;
   font-size: 2rem;
   text-align: center;
+  color: $black;
 }
 
 .description-line-2 {
   color: #444;
 }
+
+.colorSparkle1 {
+  animation: colorSparkle1 3.5s infinite;
+}
+
+.colorSparkle2 {
+  animation: colorSparkle2 3.5s infinite;
+  animation-delay: 1.3s;
+}
+
+.colorSparkle3 {
+  animation: colorSparkle3 3.5s infinite;
+  animation-delay: 2.1s;
+}
+
+.cta-buttons-container {
+  margin: 80px 0;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+
+.call-to-action-button {
+  border: none;
+  font-size: 22px;
+  color: #666;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  text-shadow: -1px 1px 2px #bbb;
+
+  i {
+    font-size: 15px;
+    margin-left: 8px;
+  }
+
+  &:hover {
+
+    i {
+       transform: translateX(3px);
+       transition: .2s;
+    }
+   
+  }
+}
+
 
 .contactLogos {
   z-index: 5;
@@ -138,11 +260,12 @@
 }
 
 .contactLogo {
-  color: black;
+  color: $black;
   font-size: 2.5rem;
   transition: .3s;
   text-shadow: 0px 1px 3px #888;
 }
+
 .sideNavUl li:hover, .contactLogo:hover, .project a:hover {
   position: relative;
   left: 1px;
@@ -194,9 +317,11 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
 .contactInfoDiv {
   padding: 6rem 3rem 0;
 }
+
 .contactInfoUl {
   list-style: none;
   display: flex;
@@ -204,6 +329,7 @@ a {
   flex-direction: row;
   font-size: 20px;
   margin-bottom: 4rem;
+  color: $black;
 }
 .infoLiText {
   margin: .5rem ;
@@ -282,7 +408,7 @@ a {
   }
 
   .sideNav {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid $black;
   }
 
   .liToggle {
@@ -325,6 +451,16 @@ a {
     display: none;
   }
 
+  .cta-buttons-container {
+    flex-direction: row;
+    margin: 10px 0 0 0;
+  }
+
+
+  .cta-about-me {
+    margin-right: 30px;
+  }
+
   .contactLogos {
     width: 20%;
     margin: 1rem 0;
@@ -357,6 +493,8 @@ a {
     transform: translate(-50%);
     left: 50%;
     margin: 0;
+    padding: 0;
   }
+
 
 }

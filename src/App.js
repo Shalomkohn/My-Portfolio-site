@@ -2,7 +2,7 @@ import NavBar from "./components/nav-bar"
 import SideNav from "./components/side-nav"
 import ContactLogos from "./components/contact-logos"
 import { useState } from "react"
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom"
 import AboutMe from "./components/about-me"
 import ContactMe from "./components/contact-me"
 import MyProjects from "./components/my-projects"
@@ -53,12 +53,25 @@ const App = () => {
                                         <h1>Hello,<br /> I'm Shalom.</h1>
                                     </div>
                                     <div className="my-description">
-                                        web design,
-                                        <br className="showOnMobile"/>
-                                        <div className="hideOnMobile"> web development.</div>
-                                        <div className="description-line-2">
+                                        
+                                        we<span className="colorSparkle1">b</span> de<span className="colorSparkle2">s</span>ign,<br />
+                                        w<span className="colorSparkle2">e</span>b dev<span className="colorSparkle3">e</span>lo<span className="colorSparkle1">p</span>me<span className="colorSparkle2">n</span>t.
+                                        <br />
+                                        {/* <div className="description-line-2">
                                             with passion and trust.
+                                        </div> */}
+                                        <div className="cta-buttons-container">
+                                            <button className="call-to-action-button cta-about-me">
+                                                <Link to="/about-me" className="btn">about me</Link>
+                                                <i class="fa-solid fa-chevron-right"></i>
+                                            </button>
+                                            <button className="call-to-action-button cta-contact-me">
+                                                <Link to="/contact-me" className="btn">contact me</Link>
+                                                <i class="fa-solid fa-chevron-right"></i>
+                                            </button>
                                         </div>
+                                       
+
                                     </div>
                                 </div>
                                 <ContactLogos />
