@@ -1,10 +1,19 @@
 import wordBeaterImg from '../word-beater-img.png'
 import NCFurnitureImg from '../NC-furniture-img.png'
 import samsCaulkingImg from '../sams-caulking-img.png'
+import universalContractingImg from '../universal-contracting.png'
 
 const projectsArray = [
     {
         id: 1,
+        title: 'Universal Contracting Group',
+        date: 'oct/2022',
+        img: universalContractingImg,
+        aTagHref: 'https://universalcontracting.group',
+        srcCodeHref: 'https://github.com/Shalomkohn/universal-contracting-group',
+    },
+    {
+        id: 2,
         title: 'Sams Shower Caulking',
         date: 'jul/2022',
         img: samsCaulkingImg,
@@ -12,7 +21,7 @@ const projectsArray = [
         srcCodeHref: 'https://github.com/Shalomkohn/sams-caulking',
     },
     {
-        id: 2,
+        id: 3,
         title: 'NC Furniture',
         date: 'Jun/2022',
         img: NCFurnitureImg,
@@ -20,7 +29,7 @@ const projectsArray = [
         srcCodeHref: 'https://github.com/Shalomkohn/North-capital-furniture',
     },
     {
-        id: 3,
+        id: 4,
         title: 'WordBeater Game ',
         date: 'Feb/2022',
         img: wordBeaterImg,
