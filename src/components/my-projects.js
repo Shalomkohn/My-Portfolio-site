@@ -2,36 +2,45 @@ import wordBeaterImg from '../word-beater-img.png'
 import NCFurnitureImg from '../NC-furniture-img.png'
 import samsCaulkingImg from '../sams-caulking-img.png'
 import universalContractingImg from '../universal-contracting.png'
+import kiddushroomImg from '../kiddushroom-img.png'
 
 const projectsArray = [
     {
         id: 1,
+        title: 'KiddushRoom',
+        date: 'dec / 2022',
+        img: kiddushroomImg,
+        aTagHref: 'https://kiddushroom.com',
+        srcCodeHref: 'https://github.com/Shalomkohn/kiddushroom-frontend',
+    },
+    {
+        id: 2,
         title: 'Universal Contracting Group',
-        date: 'oct/2022',
+        date: 'oct / 2022',
         img: universalContractingImg,
         aTagHref: 'https://universalcontracting.group',
         srcCodeHref: 'https://github.com/Shalomkohn/universal-contracting-group',
     },
     {
-        id: 2,
+        id: 3,
         title: 'Sams Shower Caulking',
-        date: 'jul/2022',
+        date: 'jul / 2022',
         img: samsCaulkingImg,
         aTagHref: 'https://dev8171.dtiqg5g6eferp.amplifyapp.com',
         srcCodeHref: 'https://github.com/Shalomkohn/sams-caulking',
     },
     {
-        id: 3,
+        id: 4,
         title: 'NC Furniture',
-        date: 'Jun/2022',
+        date: 'Jun / 2022',
         img: NCFurnitureImg,
         aTagHref: 'https://main.dy2o65319qp3n.amplifyapp.com',
         srcCodeHref: 'https://github.com/Shalomkohn/North-capital-furniture',
     },
     {
-        id: 4,
+        id: 5,
         title: 'WordBeater Game ',
-        date: 'Feb/2022',
+        date: 'Feb / 2022',
         img: wordBeaterImg,
         aTagHref: 'https://main.dpv635jgbcxbv.amplifyapp.com/',
         srcCodeHref: 'https://gist.github.com/Shalomkohn/8fc80a8019b0ada6465f1b6d05ffc6c4',
