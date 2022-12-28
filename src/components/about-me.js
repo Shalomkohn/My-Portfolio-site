@@ -7,10 +7,7 @@ const AboutMe = () => {
                 Hi, I'm a web developer.
                 <br />
                 <br />
-                i really enjoy front end development and web design.
-                <br />
-                <br />
-                I have a passion for problem solving and getting things to work in general.
+                I live in New York, USA. I really enjoy front end development and web design. I have a passion for problem solving and making things work.
                 <br />
                 <br />
                 I am skilled in:<br /><br />
@@ -19,9 +16,9 @@ const AboutMe = () => {
                 <i className="fa-brands fa-css3-alt"> </i> Css <br />
                 <i className="fa-brands fa-js"></i> Javascript <br />
                 <i className="fa-brands fa-bootstrap"> </i> Bootstrap <br />
-                <i className="fa-brands fa-sass"></i> Sass<br />
+                <i className="fa-brands fa-sass"></i> Sass, and much more...<br />
                 <br />
-                This website is fully original, made with just React.js and css, feel free to check out the <a className="thisWebsiteSrcHrefATag" href="https://github.com/Shalomkohn/My-Portfolio-site"><i>source code</i></a> on GitHub. 
+                This website is made with React.js and css, feel free to check out the <a className="thisWebsiteSrcHrefATag" href="https://github.com/Shalomkohn/My-Portfolio-site"><i>source code</i></a> on GitHub. 
                 <br />
                 <br />
                 Also, take a look at some of my cool projects in the My project section.

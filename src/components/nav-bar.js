@@ -5,7 +5,7 @@ const NavBar = ({ onClick, showSideNav, onMenuClick, closeHeight, menuHeight, sh
 
     return(
         <nav className="navBar">
-            <li className="websiteLogo liTogle"><Link to="/" className="btn" onClick={onClick}>Shalom.</Link></li>
+            <li className="websiteLogo liTogle"><Link to="/" className="btn" onClick={onClick}>Shalom Kohn</Link></li>
             <ul className="navUl">
                 <li className="contactMe liToggle"><Link to="/contact-me" className="btn">contact me</Link></li>
                 <li className="aboutMe liToggle"><Link to="/about-me" className="btn">about me</Link></li>
