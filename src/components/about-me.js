@@ -19,7 +19,7 @@ const AboutMe = () => {
                 <i className="fa-brands fa-sass"></i> Sass, and much more...<br />
                 <br />
                 This website is made with React.js and css, feel free to check out the <a className="thisWebsiteSrcHrefATag" href="https://github.com/Shalomkohn/My-Portfolio-site"><i>source code</i></a> on GitHub. 
-                <br />
+                <br /> 
                 <br />
                 Also, take a look at some of my cool projects in the My project section.
                 <br />
