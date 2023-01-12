@@ -26,7 +26,7 @@ const projectsArray = [
         title: 'Sams Shower Caulking',
         date: 'jul / 2022',
         img: samsCaulkingImg,
-        aTagHref: 'https://dev8171.dtiqg5g6eferp.amplifyapp.com',
+        aTagHref: 'https://shalomkohn.github.io/sams-caulking/',
         srcCodeHref: 'https://github.com/Shalomkohn/sams-caulking',
     },
     {
@@ -34,7 +34,7 @@ const projectsArray = [
         title: 'NC Furniture',
         date: 'Jun / 2022',
         img: NCFurnitureImg,
-        aTagHref: 'https://main.dy2o65319qp3n.amplifyapp.com',
+        aTagHref: 'https://shalomkohn.github.io/North-capital-furniture/',
         srcCodeHref: 'https://github.com/Shalomkohn/North-capital-furniture',
     },
     {
@@ -42,7 +42,7 @@ const projectsArray = [
         title: 'WordBeater Game ',
         date: 'Feb / 2022',
         img: wordBeaterImg,
-        aTagHref: 'https://main.dpv635jgbcxbv.amplifyapp.com/',
+        aTagHref: 'https://shalomkohn.github.io/new-5-second-game/',
         srcCodeHref: 'https://gist.github.com/Shalomkohn/8fc80a8019b0ada6465f1b6d05ffc6c4',
     }
 ]
