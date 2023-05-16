@@ -37,7 +37,7 @@ const ContactMe = () => {
                 })}
             </div>
             <footer className="footer">
-                <p className="copyWrite">Copyright &copy; 2022 Shalom Kohn</p>
+                <p className="copyWrite">Copyright &copy; 2023 Shalom Kohn</p>
             </footer> 
         </>
     )

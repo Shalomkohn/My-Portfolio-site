@@ -3,10 +3,27 @@ import NCFurnitureImg from '../NC-furniture-img.png'
 import samsCaulkingImg from '../sams-caulking-img.png'
 import universalContractingImg from '../universal-contracting.png'
 import kiddushroomImg from '../kiddushroom-img.png'
+import kingDavidMassageImg from '../king-david-massage.png'
+import cyberCliffImg from '../cybercliff-img.png'
 
 const projectsArray = [
     {
         id: 1,
+        title: 'CyberCliff',
+        date: 'may / 2023',
+        img: cyberCliffImg,
+        aTagHref: 'https://cybercliff.com'
+    },
+    {
+        id: 2,
+        title: 'King David Massage',
+        date: 'Feb / 2023',
+        img: kingDavidMassageImg,
+        aTagHref: 'https://shalomkohn.github.io/king-david-massage',
+        srcCodeHref: 'https://github.com/Shalomkohn/king-david-massage',
+    },
+    {
+        id: 3,
         title: 'KiddushRoom',
         date: 'dec / 2022',
         img: kiddushroomImg,
@@ -14,7 +31,7 @@ const projectsArray = [
         srcCodeHref: 'https://github.com/Shalomkohn/kiddushroom-frontend',
     },
     {
-        id: 2,
+        id: 4,
         title: 'Universal Contracting Group',
         date: 'oct / 2022',
         img: universalContractingImg,
@@ -22,7 +39,7 @@ const projectsArray = [
         srcCodeHref: 'https://github.com/Shalomkohn/universal-contracting-group',
     },
     {
-        id: 3,
+        id: 5,
         title: 'Sams Shower Caulking',
         date: 'jul / 2022',
         img: samsCaulkingImg,
@@ -30,16 +47,16 @@ const projectsArray = [
         srcCodeHref: 'https://github.com/Shalomkohn/sams-caulking',
     },
     {
-        id: 4,
-        title: 'NC Furniture',
+        id: 6,
+        title: 'NC Furniture (Practice Page)',
         date: 'Jun / 2022',
         img: NCFurnitureImg,
         aTagHref: 'https://shalomkohn.github.io/North-capital-furniture/',
         srcCodeHref: 'https://github.com/Shalomkohn/North-capital-furniture',
     },
     {
-        id: 5,
-        title: 'WordBeater Game ',
+        id: 7,
+        title: 'WordBeater Game',
         date: 'Feb / 2022',
         img: wordBeaterImg,
         aTagHref: 'https://shalomkohn.github.io/new-5-second-game/',
@@ -49,11 +66,11 @@ const projectsArray = [
 
 const MyProjects = () => {
 
-    return(
+    return (
         <>
             <div className="myProjectsDiv">
                 {projectsArray.map(project => {
-                    return(
+                    return (
                         <div key={project.id} className='project'>
                             <div>
                                 <h3 className='projectName'>{project.title}</h3>
@@ -62,18 +79,18 @@ const MyProjects = () => {
                             <img className='projectImg' src={project.img} alt="project image" />
                             <div>
                                 <a href={project.aTagHref} target="_blank" className='projectLink btn'>Look Up Site</a>
-                                <a className='projectSourceCodeATag' href={project.srcCodeHref} target="_blank">Source Code</a>
+                                {project.srcCodeHref && <a className='projectSourceCodeATag' href={project.srcCodeHref} target="_blank">Source Code</a>}
                             </div>
-                        </div>        
+                        </div>
                     )
                 })}
-                <div className='project' style={{height: '300px'}}>
+                <div className='project' style={{ height: '300px' }}>
                     <h3 className='projectName'>Another cool project being worked on right now...</h3>
-                </div>  
+                </div>
             </div>
-            <footer className="footer" style={{position: 'relative', right: '15px'}}>
-                <p className="copyWrite" >Copyright &copy; 2022 Shalom Kohn</p>
-            </footer> 
+            <footer className="footer" style={{ position: 'relative', right: '15px' }}>
+                <p className="copyWrite" >Copyright &copy; 2023 Shalom Kohn</p>
+            </footer>
         </>
     )
 }
