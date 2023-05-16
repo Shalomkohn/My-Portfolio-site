@@ -6,7 +6,7 @@ const AboutMe = () => {
             <p className="aboutMeDiv">
                 Hi, I'm a web developer.
                 <br />
-                <br />
+                <br /> 
                 I live in New York, USA. I focus on the front end. I have a passion for problem solving and making things work.
                 <br />
                 <br />
