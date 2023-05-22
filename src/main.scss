@@ -253,7 +253,7 @@ $black: #1d1d1d;
 
 .contactLogos {
   z-index: 5;
-  width: 50%;
+  width: 150px;
   margin: 5rem auto;
   display: flex;
   justify-content: space-between;
@@ -389,7 +389,7 @@ a {
   }
 
   .contactLogos {
-    width: 30%;
+    width: 150px;
   }
 
   /*  =============   /about-me ============= */
@@ -466,7 +466,7 @@ a {
   }
 
   .contactLogos {
-    width: 20%;
+    width: unset;
     margin: 1rem 0;
     display: flex;
     justify-content: space-between;
@@ -474,6 +474,11 @@ a {
     left: 20px;
     bottom: 0;
   }
+
+  .contactLogos i {
+    margin-right: 2rem;
+  }
+
   /*  ======== /my-projects ======== */
 
   .myProjectsDiv {

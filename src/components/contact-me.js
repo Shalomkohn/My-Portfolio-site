@@ -3,11 +3,11 @@
 const ContactMe = () => {
 
     const info = [
-        {
-            id: 1,
-            icon: <a href="https://twitter.com/Shalom_Dev" target="_blank"><i className="fa-brands fa-twitter contactLogo btn"></i></a>,
-            text: <a href="https://twitter.com/Shalom_Dev" target="_blank" className="btn">@Shalom_Dev</a>,
-        },
+        // {
+        //     id: 1,
+        //     icon: <a href="https://twitter.com/Shalom_Dev" target="_blank"><i className="fa-brands fa-twitter contactLogo btn"></i></a>,
+        //     text: <a href="https://twitter.com/Shalom_Dev" target="_blank" className="btn">@Shalom_Dev</a>,
+        // },
         {
             id: 2,
             icon: <a href="https://www.linkedin.com/in/shalom-ber-kohn-525988233/" target="_blank"><i className="fa-brands fa-linkedin contactLogo btn"></i></a>,
