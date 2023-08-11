@@ -15,7 +15,7 @@ const MyProjects = () => {
                             </div>
                             <img className='projectImg' src={project.img} alt="project image" />
                             <div>
-                                <a href={project.aTagHref} target="_blank" className='projectLink btn'>Look Up Site</a>
+                                {project.aTagHref && <a href={project.aTagHref} target="_blank" className='projectLink btn'>Look Up Site</a>}
                                 {project.srcCodeHref && <a className='projectSourceCodeATag' href={project.srcCodeHref} target="_blank">Source Code</a>}
                             </div>
                         </div>

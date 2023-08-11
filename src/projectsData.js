@@ -27,7 +27,6 @@ export const projectsArray = [
         title: 'KiddushRoom',
         date: 'dec / 2022',
         img: kiddushroomImg,
-        aTagHref: 'https://kiddushroom.com',
         srcCodeHref: 'https://github.com/Shalomkohn/kiddushroom-frontend',
     },
     {
